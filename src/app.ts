@@ -5,13 +5,14 @@ import logger from './utils/logger';
 import routes from './routes';
 
 //config folder => default.ts => port => 1337 (value)
-const port = config.get<number>('port')
+const port = config.get<number>('port');
 // toString(number system) if toString(2) => binary, toString(10) => decimal
-logger.info(`Port: ${port.toString(10)}`)
+logger.info(`Port: ${port.toString(10)}`);
 
 
-const app = express()
+const app = express();
 
+app.use(express.json());
 
 
 app.listen(port, async ()=> {
@@ -21,7 +22,9 @@ app.listen(port, async ()=> {
 
     await connect();
 
-    routes(app)    
+    routes(app);
 });
+
+
 
 
