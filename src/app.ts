@@ -6,8 +6,12 @@ import routes from './routes';
 
 //config folder => default.ts => port => 1337 (value)
 const port = config.get<number>('port')
+// toString(number system) if toString(2) => binary, toString(10) => decimal
+logger.info(`Port: ${port.toString(10)}`)
+
 
 const app = express()
+
 
 
 app.listen(port, async ()=> {

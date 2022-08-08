@@ -1,8 +1,8 @@
-import logger from 'pino';
+import pino from 'pino';
 import dayjs from 'dayjs';
 
 // logger to replace console.logs
-const pino = require('pino');
+//const pino = require('pino');
 
 const log = pino({
     transport: {
