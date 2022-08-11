@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 import config from 'config';
-import { object } from 'zod';
 
 
 const privateKey = config.get<string>('privateKey');
